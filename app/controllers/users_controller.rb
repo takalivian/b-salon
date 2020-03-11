@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @name = current_user.name
+    # @posts = current_user.posts
     @user=User.find(params[:id])
     @currentUserEntry=Entry.where(user_id: current_user.id)
     @userEntry=Entry.where(user_id: @user.id)
@@ -24,4 +26,23 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    if current_user.update(user_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :image, :activity, :sex, :age, :birthday, :position, :introduction)
+  end
+
 end

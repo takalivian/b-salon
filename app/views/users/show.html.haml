@@ -1,13 +1,69 @@
-%h1 ユーザー詳細
-%h2= @user.email
-- if @user.id == current_user.id
-- else
-  - if @isRoom == true
-    %p
-      %a{:href => "/rooms/#{@roomId}"} チャットへ
-  - else
-    = form_for @room do |f|
-      = fields_for @entry do |e|
-        = e.hidden_field :user_id, :value=> @user.id
-      = f.submit "チャットを始める"
-= link_to "ユーザー一覧に戻る", users_path
+.header
+  .header__header-bar
+    .header__header-bar__title
+      = link_to root_path, class: "btn-root" do
+        Matching Baseball
+    .header__header-bar__box
+      .header__header-bar__box__post
+        = link_to new_post_path, class: "btn-post" do
+          募集する
+      .header__header-bar__box__user
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
+
+= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn'
+
+.name-box
+  .name-box__picture
+    -if @user.image?
+      = image_tag @user.image.url
+    -else
+      = image_tag "siruetto.jpg"
+.user-content
+  .user-content__profile
+    .user-content__profile__title
+      = @user.name
+      さんのプロフィール
+    .user-content__profile__icon
+      - if @user.id == current_user.id
+        = link_to  edit_user_path, class: "btn-edit" do
+          = icon('fas', 'cog')
+      - else
+        - if @isRoom == true
+          %p
+            %a{:href => "/rooms/#{@roomId}"} チャットへ
+        - else
+          = form_for @room do |f|
+            = fields_for @entry do |e|
+              = e.hidden_field :user_id, :value=> @user.id
+            = f.submit "チャットを始める"
+          
+    
+  .user-content__activity
+    　　活動エリア　　　
+    = @user.activity
+  .user-content__sex
+    　　性別　　　　　　
+    = @user.sex
+  .user-content__age
+    　　年齢　　　　　　
+    = @user.age
+    歳
+  .user-content__birthday
+    　　生年月日　　　　
+    = @user.birthday
+    
+  .user-content__position
+    　　得意ポジション　
+    = @user.position
+  .user-content__introduction
+    .user-content__introduction__text-name
+      自己紹介
+    .user-content__introduction__text-box
+      = @user.introduction
+
+
+
+
+
+.footer

@@ -1,0 +1,157 @@
+
+.name-box{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+  &__picture{
+    line-height: 150px;
+    margin: auto;
+    margin-top: 30px;
+    img{
+      // width: 200px;
+      // height: 300px;
+    }
+  }
+}
+
+.user-content{
+  width: 600px;
+  margin: auto;
+  margin-bottom: 100px;
+  font-size: 17px;
+  font-weight: bold;
+  &__profile{
+    height: 50px;
+    // border-top: solid 1px gray;
+    padding: 12px 0;
+    // text-align: center;
+    display: flex;
+    &__title{
+      margin: auto;
+    }
+    &__icon{
+      .btn-edit{
+        color: black;
+      }
+    }
+
+  }
+  &__activity{
+    height: 50px;
+    border-top: solid 1px gray;
+    padding: 12px 0;
+
+  }
+  &__sex{
+    height: 50px;
+    border-top: solid 1px gainsboro;
+    padding: 12px 0;
+  }
+  &__age{
+    height: 50px;
+    border-top: solid 1px gainsboro;
+    padding: 12px 0;
+  }
+  &__birthday{
+    height: 50px;
+    border-top: solid 1px gainsboro;
+    padding: 12px 0;
+  }
+  &__position{
+    height: 50px;
+    border-top: solid 1px gainsboro;
+    padding: 12px 0;
+  }
+  &__introduction{
+    border-top: solid 1px gainsboro;
+    padding-top: 12px;
+    display: flex;
+    &__text-name{
+      width: 150px;
+      padding-left: 33px;
+    }
+    &__text-box{
+      padding-left: 22px;
+    }
+  }
+}
+
+.account-page{
+  width: 100%;
+  height: 100%;
+  &__top{
+    text-align: center;
+    background: #F3F7FC;
+    height: 60px;
+    font-weight: bold;
+    line-height: 60px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  &__content{
+    width: 450px;
+    margin: auto;
+    font-size: 20px;
+    padding: 24px;
+    border: solid 1px #DDD;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    &__photo{
+      padding-left: 170px;
+      .fa-image{
+        font-size: 40px;
+        cursor: pointer;
+      }
+      input{
+        display: none;
+      }
+    }
+    &__profile-name{
+
+    }
+    &__profile-activity{
+
+    }
+    &__profile-sex{
+
+    }
+    &__profile-age{
+      
+    }
+    .age-box{
+      width: 50px;
+    }
+    &__profile-birthday{
+
+    }
+    &__profile-position{
+
+    }
+    &__profile-introduction{
+
+    }
+    .introduction-box{
+      width: 400px;
+    }
+    &__profile-submit{
+      text-align: center;
+      margin-bottom: 40px;
+      
+      .btn-submit{
+        margin-left: 150px;
+        border-radius: 4px;
+        background: #1C6CC1;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+        color: white;
+        padding: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logout-btn{
+  float: right;
+}

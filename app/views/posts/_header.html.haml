@@ -8,9 +8,8 @@
         = link_to  new_post_path, class: "btn-post" do
           募集する
       .header__header-bar__box__user
-        = link_to "#", class: "btn-edit" do
-          高村
-          -# = current_user.name
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
   .header__header-bar-picture
     Let's play baseball together.
   .header__header-bar-second
