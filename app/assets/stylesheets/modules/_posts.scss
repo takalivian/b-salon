@@ -1,3 +1,111 @@
 * {
   box-sizing: border-box;
 }
+.wrapper {
+}
+
+.header{
+  &__header-bar{
+    background: url(http://www.webcreatorbox.com/sample/images/line.gif) repeat-x bottom left;
+    padding-bottom: 15px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 80px;
+    &__title{
+      padding-left: 50px;
+      font-size: 30px;
+      font-family: 'Amatic SC', cursive;
+      
+    }
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 60px;
+      width:400px;
+      font-size: 20px;
+      &__post{
+        width: 40%;
+        border-bottom: solid 6px slategrey;
+        .btn-post{
+          text-decoration: none;
+          color: slategrey;
+        }
+      }
+      &__user{
+        width: 40%;
+        border-bottom: solid 6px slategrey;
+        .btn-edit{
+          text-decoration: none;
+          color: slategrey;
+        }
+      }
+    }
+  }
+  &__header-bar-picture{
+    background-image: url("ball.jpg");
+    height: 400px;
+    width: 48%;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 200px;
+    font-weight: 600;
+    font-family: 'arial black';
+  }
+  &__header-bar-second{
+    width: 100%;
+    height: 62px;
+    &__search{
+      text-align: center;
+      line-height: 62px;
+      input{
+        
+      }
+    }
+  }
+  &__header-bar-third{
+    width: 100%;
+    height: 72px;
+    &__information{
+      text-align: center;
+      line-height: 72px;
+      font-size: 40px;
+    }
+  }
+}
+
+.recruitment{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 90px;
+  &__content{
+    background-image: url("野球場.jpeg");
+    background-size:cover;
+    opacity:  0.7;
+    height: 300px;
+    width: 400px;
+    padding: 40px;
+    margin: 50px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    &__title{
+      font-weight: 600;
+      padding-bottom: 20px;
+    }
+    &__application-btn{
+      padding-top: 20px;
+    }
+  }
+}
+
+.footer{
+  width: 100%;
+  height: 100px;
+  background-image: url("ground.png");
+  background-size: 2000px;
+}
