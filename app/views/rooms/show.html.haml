@@ -1,10 +1,23 @@
+.header
+  .header__header-bar
+    .header__header-bar__title
+      = link_to root_path, class: "btn-root" do
+        Matching Baseball
+    .header__header-bar__box
+      .header__header-bar__box__post
+        = link_to new_post_path, class: "btn-post" do
+          募集する
+      .header__header-bar__box__user
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
+
 %h1 DM
 %h4 参加者
 - @entries.each do |e|
   %h5
     %strong
       %a{:href => "/users/#{e.user.id}"}
-        = e.user.email
+        = e.user.name
         さん
 %hr/
 - if @messages.present?
@@ -14,7 +27,7 @@
       by
       %strong
         %a{:href => "/users/#{m.user_id}"}
-          = m.user.email
+          = m.user.name
           さん
     %hr/
 - else
@@ -25,3 +38,6 @@
   %br/
   = f.submit "投稿する"
 = link_to "ユーザー一覧に戻る", users_path
+
+
+.footer

@@ -38,7 +38,7 @@
       歳
       .account-page__content__profile-birthday
         生年月日
-      = form.date_select :birthday, default: { year: 1990, use_month_numbers: 1, day: 1 }
+      = form.date_select :birthday, {start_year: 1800, end_year: 2020}, {start_year: 1990}
       .account-page__content__profile-position
         得意ポジション
       = form.select :position, [ ["ピッチャー"], ["キャッチャー"], ["ファースト"], ["セカンド"], ["サード"], ["ショート"], ["レフト"], ["センター"], ["ライト"] ], prompt: "選択してください"
