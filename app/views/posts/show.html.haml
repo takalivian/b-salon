@@ -1,0 +1,64 @@
+.header
+  .header__header-bar
+    .header__header-bar__title
+      = link_to posts_path, class: "btn-root" do
+        Matching Baseball
+    .header__header-bar__box
+      .header__header-bar__box__post
+        = link_to new_post_path, class: "btn-post" do
+          募集する
+      .header__header-bar__box__user
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
+
+.show-content
+
+  .show-content__show-title
+    = @post.title
+  .show-content__show-application
+    = form_with model: @group, class: 'form' do |group|
+      .show-content__show-application__form-group
+      - if @post.user.id == current_user.id
+        = link_to "#", class: "btn-edit" do
+          = icon('fas', 'cog')
+      - else
+        - if @isRoom == true
+          %p
+            %a{:href => "/rooms/#{@roomId}"} 応募する
+        - else
+          = form_for @room do |f|
+            = fields_for @entry do |e|
+              = e.hidden_field :user_id, :value=> @post.user.id
+            = f.submit "応募す"
+
+  
+  .show-content__data
+    .show-content__data__show-name
+      　　募集者　　
+      = link_to user_path(@post.user_id), class: "user--edit" do
+        = @post.user.name
+      
+    
+    .show-content__data__show-date
+      　　開催日　　
+      = @post.date
+    .show-content__data__show-place
+      　　住所　　　
+      〒
+      = @post.postal
+      　
+      = @post.place
+    .show-content__data__show-venue
+      　　会場　　　
+      = @post.venue
+    .show-content__data__show-capacity
+      　　定員　　　
+      = @post.capacity
+      人
+    .show-content__data__show-remarks
+      .show-content__data__show-remarks__title
+        備考
+      .show-content__data__show-remarks__write
+        = @post.remarks
+
+= render "footer"
