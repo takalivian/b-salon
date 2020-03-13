@@ -127,7 +127,7 @@
   width: 70%;
   background-color: ghostwhite;
   margin: auto;
-  padding: 20px 30px;
+  padding: 20px 100px;
   margin-top: 20px;
   font-size: 18px;
   &__title{
@@ -209,12 +209,21 @@
     }
   }
   &__upload{
-    padding-left: 400px;
+    padding-left: 350px;
+    margin-right: 20px;
     .upload-box{
-      height: 50px;
-      width: 100px;
-      background-color: white;
-  
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #668ad8;
+      color: #FFF;
+      border-bottom: solid 4px #627295;
+      border-radius: 3px;
+    }
+    .upload-box:active {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+      border-bottom: none;
     }
   }
 }

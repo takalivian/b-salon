@@ -36,6 +36,19 @@ class PostsController < ApplicationController
 
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+  end
   # def create
   #   @room = Room.create
   #   @entry1 = Entry.create(:room_id => @room.id, :user_id => current_user.id)

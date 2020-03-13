@@ -19,7 +19,7 @@
     = form_with model: @group, class: 'form' do |group|
       .show-content__show-application__form-group
       - if @post.user.id == current_user.id
-        = link_to "#", class: "btn-edit" do
+        = link_to  edit_post_path, class: "btn-edit" do
           = icon('fas', 'cog')
       - else
         - if @isRoom == true

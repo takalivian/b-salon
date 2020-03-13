@@ -12,6 +12,18 @@
           = current_user.name
   .header__header-bar-picture
     Let's play baseball together.
+
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        %img{:alt => "Swiper01", :src => "https://haniwaman.com/wp-content/uploads/2018/05/swiper01.png"}/
+      .swiper-slide
+        %img{:alt => "Swiper02", :src => "https://haniwaman.com/wp-content/uploads/2018/05/swiper02.png"}/
+      .swiper-slide
+        %img{:alt => "Swiper03", :src => "https://haniwaman.com/wp-content/uploads/2018/05/swiper03.png"}/
+  .swiper-button-prev
+  .swiper-button-next
+
   .header__header-bar-second
     .header__header-bar-second__search
       = form_with url: posts_path, method: :get, local: true do |form|
@@ -21,7 +33,7 @@
       
     
   .header__header-bar-third
-    .header__header-bar-third__information
+    .header__header-bar-third__information.wow.flip
       = icon('far', 'calendar-alt')
       募集情報
 

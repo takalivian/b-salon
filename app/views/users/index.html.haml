@@ -1,13 +1,5 @@
 %h1 一緒に野球しようよ
 - if user_signed_in?
-  -# %h2
-  -#   Hello #{current_user.email}
-  -# - @users.each do |u|
-  -#   %p
-  -#     %a{:href => "/users/#{u.id}"}
-  -#       = u.email
-  -#       さん
-  -#   %hr/
   = link_to "トップに戻る", posts_path
   = link_to "ログアウト", destroy_user_session_path, :method => :delete
 - else
