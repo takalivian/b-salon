@@ -49,6 +49,11 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
   end
+
+  def search
+    @posts = Post.search(params[:keyword])
+    redirect_to action: :index unless user_signed_in?
+  end
   # def create
   #   @room = Room.create
   #   @entry1 = Entry.create(:room_id => @room.id, :user_id => current_user.id)
