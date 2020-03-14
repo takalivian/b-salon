@@ -1,8 +1,13 @@
-%h1 一緒に野球しようよ
-- if user_signed_in?
-  = link_to "トップに戻る", posts_path
-  = link_to "ログアウト", destroy_user_session_path, :method => :delete
-- else
-  = link_to "ユーザーを登録する", new_user_registration_path
-  %br/
-  = link_to "ログインする", new_user_session_path
+.top-page
+  .top-page__box
+    .top-page__box__title.wow.fadeInUp
+      一緒に野球しようよ
+    .top-pag__box__login.wow.fadeInUp
+      - if user_signed_in?
+        = link_to "トップに戻る　　", posts_path
+        
+        = link_to "ログアウト", destroy_user_session_path, :method => :delete
+      - else
+        = link_to "ユーザーを登録する", new_user_registration_path
+        %br/
+        = link_to "ログインする", new_user_session_path

@@ -140,7 +140,6 @@
       margin-bottom: 40px;
       
       .btn-submit{
-        margin-left: 150px;
         border-radius: 4px;
         background: #1C6CC1;
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -156,7 +155,37 @@
   float: right;
 }
 
-
 #oppai{
   background-color: red;
+}
+
+.top-page{
+  background-image: url("start.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  width:100vw;
+  height:100vh;
+  padding-top: 380px;
+  font-size: 40px;
+  &__box{
+    height: 200px;
+    width: 800px;
+    margin-left: auto;
+    
+    &__title{
+      margin-bottom: 30px;
+      color: blanchedalmond;
+      font-size: 50px;
+    }
+    &__login{
+      
+    }
+    
+  }
+}
+
+#main a {
+  text-decoration: none;
+  color: wheat;
 }
