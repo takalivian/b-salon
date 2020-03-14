@@ -13,7 +13,7 @@
 
 .header-title
   = icon('fas', 'pen')
-  募集情報の新規作成
+  募集情報の編集
 
 .content
   = form_with(model: @post, local: true) do |form|
@@ -41,6 +41,10 @@
       備考
       = form.text_area :remarks, placeholder: "備考を入力して下さい" , rows: "1000", class: 'remarks-box'
     .content__upload
-      = form.submit :投稿する, class: 'upload-box'
-= render "footer"
+      = form.submit :編集する, class: 'upload-box'
+      .content__upload__destroy
+        = link_to "/posts/#{@post.id}", method: :delete do
+          = icon('fa', 'trash')
 
+
+= render "footer"

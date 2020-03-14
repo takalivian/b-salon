@@ -1,12 +1,13 @@
 .recruitment
   - @posts.each do |post|
-    .recruitment__content
-      .recruitment__content__title 
+    .recruitment__content.wow.fadeInLeft
+      .recruitment__content__title
         = post.title
       .recruitment__content__name
         募集者 : 
         = link_to user_path(post.user_id), class: "user--edit" do
-          まだだよ
+          = post.user.name
+          
           
       .recruitment__content__date
         開催日 : 
@@ -15,6 +16,6 @@
         エリア : 
         = post.area_id
       .recruitment__content__application-btn
-        = link_to "#", class: "btn--edit" do
+        = link_to post_path(post), class: "btn--edit" do
           詳細を見る
     

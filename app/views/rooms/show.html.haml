@@ -1,27 +1,56 @@
-%h1 DM
-%h4 参加者
-- @entries.each do |e|
-  %h5
-    %strong
-      %a{:href => "/users/#{e.user.id}"}
-        = e.user.email
-        さん
-%hr/
-- if @messages.present?
-  - @messages.each do |m|
-    %strong= m.content
-    %small
-      by
-      %strong
-        %a{:href => "/users/#{m.user_id}"}
-          = m.user.email
-          さん
-    %hr/
-- else
-  %h3.text-center メッセージはまだありません
-= form_for @message do |f|
-  = f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70
-  = f.hidden_field :room_id, :value => @room.id
-  %br/
-  = f.submit "投稿する"
-= link_to "ユーザー一覧に戻る", users_path
+.header
+  .header__header-bar
+    .header__header-bar__title
+      = link_to posts_path, class: "btn-root" do
+        Matching Baseball
+    .header__header-bar__box
+      .header__header-bar__box__post
+        = link_to new_post_path, class: "btn-post" do
+          募集する
+      .header__header-bar__box__user
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
+
+
+-# = link_to "ユーザー一覧に戻る", users_path
+
+
+
+.message
+
+  .message__message-header
+    .message__message-header__header-name
+      - @entries.each do |e|
+        %a{:href => "/users/#{e.user.id}"}
+          = e.user.name
+          さん　　
+  .message__main-chat
+    .message__main-chat__message-post
+      .message__main-chat__message-post__upper-info
+        .message__main-chat__message-post__upper-info__name
+          - if @messages.present?
+            - @messages.each do |m|
+              %br
+              %br
+              %strong= m.content
+              %small
+                by
+                %strong
+                  %a{:href => "/users/#{m.user_id}"}
+                    = m.user.name
+                    さん
+                    %br
+                    
+              %hr/
+          - else
+            %h3.text-center メッセージはまだありません
+
+
+  .message__form
+    .message__form__comment
+      = form_for @message do |f|
+        = f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 60, class: 'text'
+        = f.hidden_field :room_id, :value => @room.id
+        %br/
+        = f.submit "投稿する", class: 'btn--send'
+.footer
