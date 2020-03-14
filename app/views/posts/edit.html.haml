@@ -22,7 +22,7 @@
       = form.text_field :title, placeholder: "タイトル 40文字以内" , rows: "40", class: 'title-box'
     .content__date
       開催日
-      = form.datetime_field :date, placeholder: "", class: 'date-box'
+      = form.date_field :date, placeholder: "", class: 'date-box'
     .content__area
       エリア
       .area-box
@@ -42,9 +42,9 @@
       = form.text_area :remarks, placeholder: "備考を入力して下さい" , rows: "1000", class: 'remarks-box'
     .content__upload
       = form.submit :編集する, class: 'upload-box'
-    .content__btn-real
-      = link_to "#", method: :delete do
-        = icon('fa', 'power-off')
+      .content__upload__destroy
+        = link_to "/posts/#{@post.id}", method: :delete do
+          = icon('fa', 'trash')
 
 
 = render "footer"

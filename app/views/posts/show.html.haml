@@ -29,7 +29,7 @@
           = form_for @room do |f|
             = fields_for @entry do |e|
               = e.hidden_field :user_id, :value=> @post.user.id
-            = f.submit "応募す"
+            = f.submit "応募する"
 
   
   .show-content__data
