@@ -10,14 +10,7 @@
       .header__header-bar__box__user
         = link_to user_path(current_user), class: "btn-edit" do
           = current_user.name
-
-
--# = link_to "ユーザー一覧に戻る", users_path
-
-
-
 .message
-
   .message__message-header
     .message__message-header__header-name
       - @entries.each do |e|
@@ -31,7 +24,6 @@
           - if @messages.present?
             - @messages.each do |m|
               %br
-              %br
               %strong= m.content
               %small
                 by
@@ -40,12 +32,9 @@
                     = m.user.name
                     さん
                     %br
-                    
               %hr/
           - else
             %h3.text-center メッセージはまだありません
-
-
   .message__form
     .message__form__comment
       = form_for @message do |f|
