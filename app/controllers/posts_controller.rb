@@ -33,7 +33,6 @@ class PostsController < ApplicationController
         @entry = Entry.new
       end
     end
-
   end
 
   def edit
