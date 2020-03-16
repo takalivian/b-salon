@@ -76,3 +76,51 @@
   text-decoration:none !important;
   cursor: pointer;
 }
+
+
+.room-top{
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 40px;
+  // background-color: gainsboro;
+}
+.name-form{
+  height: 70px;
+  width: 250px;
+  // background-color: honeydew;
+  margin: auto;
+  display: flex;
+  &__icon-box{
+
+  }
+  &__text-box{
+    
+  }
+}
+.room-list{
+  height: 150px;
+  width: 700px;
+  background-color: indianred;
+  margin: auto;
+  display: flex;
+  margin-bottom: 30px;
+  &__image{
+    width: 150px;
+    background-color: lemonchiffon;
+  }
+  &__talk-box{
+    line-height: 75px;
+    &__name{
+      background-color: lightblue;
+      height: 50%;
+      
+    }
+    &__last-talk{
+      height: 50%;
+      width: 550px;
+      background-color: lightgreen;
+    }
+  }
+}

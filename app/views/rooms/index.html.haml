@@ -1,0 +1,50 @@
+.header
+  .header__header-bar
+    .header__header-bar__title
+      = link_to posts_path, class: "btn-root" do
+        Matching Baseball
+    .header__header-bar__box
+      .header__header-bar__box__post
+        = link_to new_post_path, class: "btn-post" do
+          募集する
+      .header__header-bar__box__user
+        = link_to user_path(current_user), class: "btn-edit" do
+          = current_user.name
+
+.room-top
+  トーク一覧
+.name-form
+  .name-form__icon-box
+    = icon('fas', 'search')
+  .name-form__text-box
+    = form_with url:'/forecasts', method: :get, local: true do |f|
+      = f.text_field :weather_key
+      = f.submit 'Search'
+.room-list
+  .room-list__image
+    写真
+  .room-list__talk-box
+    .room-list__talk-box__name
+      高村
+    .room-list__talk-box__last-talk
+      よろしくお願いします。
+
+.room-list
+  .room-list__image
+    写真
+  .room-list__talk-box
+    .room-list__talk-box__name
+      高村
+    .room-list__talk-box__last-talk
+      よろしくお願いします。
+
+.room-list
+  .room-list__image
+    写真
+  .room-list__talk-box
+    .room-list__talk-box__name
+      高村
+    .room-list__talk-box__last-talk
+      よろしくお願いします。
+      
+.footer
