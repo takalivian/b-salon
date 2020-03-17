@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to:"users#index"
   resources :users, only: [:index, :show, :edit, :update]
 
-  resources :messages, only: [:create]
+  resources :messages, only: [:index, :create]
   resources :rooms, only: [:create, :show, :index]
   resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     collection do
