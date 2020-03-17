@@ -26,7 +26,7 @@
       さんのプロフィール
     .user-content__profile__icon
       - if @user.id == current_user.id
-        = link_to  rooms_path, class: "btn-edit" do
+        = link_to  messages_path, class: "btn-edit" do
           = icon('fas', 'comments')
         = link_to  edit_user_path, class: "btn-edit" do
           = icon('fas', 'cog')
