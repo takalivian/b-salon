@@ -77,6 +77,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'bootstrap', '~> 4.1.1'
+gem 'fog-aws'
 
 group :production do
   gem 'unicorn', '5.4.1'
