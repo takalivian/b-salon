@@ -3,7 +3,14 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
-
+    @currentEntries = current_user.entries
+    myRoomIds = []
+  
+    @currentEntries.each do |entry|
+      myRoomIds << entry.room.id
+    end
+  
+    @anotherEntries = Entry.where(room_id: myRoomIds).where('user_id != ?',current_user)
   end
 
   def create
