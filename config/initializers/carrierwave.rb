@@ -13,8 +13,8 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory  = 'takalivian2'
-    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/takalivian2'
+    config.fog_directory  = 'takalivian'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/takalivian'
   else
     config.storage :file
     config.enable_processing = false if Rails.env.test?
