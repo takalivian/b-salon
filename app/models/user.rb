@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
 
+  validates :name, presence: true, length: { maximum: 6 }
   mount_uploader :image, ImageUploader
 end
