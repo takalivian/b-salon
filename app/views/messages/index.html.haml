@@ -23,29 +23,14 @@
 - @anotherEntries.each do |e|
   .room-list
     .room-list__image
-      写真
+      -if e.user.image?
+        = image_tag "#{e.user.image.url}", :size =>'150x150'
+      -else
+        = image_tag "siruetto.jpg", :size =>'150x150'
     .room-list__talk-box
       .room-list__talk-box__name
         = link_to room_path(e.room.id) do
           = e.user.name
       .room-list__talk-box__last-talk
-        
-        -# = message.room.id
-        -# = message.content
--# - @anotherEntries.each do |e|
--#   = link_to room_path(e.room.id) do
--#     = e.user.name
--#     とのDM
--#     %br/
-
-
--# .room-list
--#   .room-list__image
--#     写真
--#   .room-list__talk-box
--#     .room-list__talk-box__name
--#       高村
--#     .room-list__talk-box__last-talk
--#       よろしくお願いします。
-
+        = e.room.messages.order(created_at: :desc).take.try(:content)
 .footer
