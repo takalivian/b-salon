@@ -21,11 +21,11 @@
     - else
       - if @isRoom == true
         %p
-          %a{:href => "/rooms/#{@roomId}"} 応募する
+          %a{href: "/rooms/#{@roomId}"} 応募する
       - else
         = form_for @room do |f|
           = fields_for @entry do |e|
-            = e.hidden_field :user_id, :value=> @post.user.id
+            = e.hidden_field :user_id, valu: @post.user.id
           = f.submit "応募する"
   .show-content__data
     .show-content__data__show-name
