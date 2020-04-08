@@ -1,0 +1,56 @@
+.room-top{
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.room-list{
+  height: 150px;
+  width: 700px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  transition: all 0.6s ease 0s;
+  &__image{
+    width: 150px;
+    .message-user-image{
+      border-radius: 50%;
+    }
+  }
+  &__talk-box{
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    &__name{
+      height: 50%;
+      padding-top: 10px;
+    }
+    &__last-talk{
+      height: 50%;
+      width: 550px;
+    }
+  }
+  &__talk-box:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+  }
+}
+.room-list:hover{
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
