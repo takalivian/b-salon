@@ -28,19 +28,21 @@
               - if m.user.id != current_user.id
                 .left-message-box
                   .left-message-box__name
-                    -if m.user.image?
-                      = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
-                    -else
-                      = image_tag "siruetto.jpg", :size =>'50x50'
+                    %a{:href => "/users/#{m.user.id}"}
+                      -if m.user.image?
+                        = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
+                      -else
+                        = image_tag "siruetto.jpg", :size =>'50x50',class: "message-user-image"
                   .left-message-box__content
                     = m.content
               -else
                 .right-message-box
                   .right-message-box__name
-                    -if m.user.image?
-                      = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
-                    -else
-                      = image_tag "siruetto.jpg", :size =>'50x50',class: "message-user-image"
+                    %a{:href => "/users/#{m.user.id}"}
+                      -if m.user.image?
+                        = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
+                      -else
+                        = image_tag "siruetto.jpg", :size =>'50x50',class: "message-user-image"
                   .right-message-box__content
                     = m.content
           - else
