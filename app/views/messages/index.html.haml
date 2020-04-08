@@ -24,7 +24,7 @@
   .room-list
     .room-list__image
       -if e.user.image?
-        = image_tag "#{e.user.image.url}", :size =>'150x150'
+        = image_tag "#{e.user.image.url}", :size =>'150x150',class: "message-user-image"
       -else
         = image_tag "siruetto.jpg", :size =>'150x150'
     .room-list__talk-box
@@ -32,5 +32,9 @@
         = link_to room_path(e.room.id) do
           = e.user.name
       .room-list__talk-box__last-talk
-        = e.room.messages.order(created_at: :desc).take.try(:content)
+        - if e.room.messages.order(created_at: :desc).take.try(:content).present? 
+          = link_to room_path(e.room.id) do
+            = e.room.messages.order(created_at: :desc).take.try(:content)
+        -else
+          まだメッセージはありません。
 .footer
