@@ -6,7 +6,7 @@
       - if user_signed_in?
         = link_to "トップページ　　", posts_path
         
-        = link_to "ログアウト", destroy_user_session_path, :method => :delete
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
         = link_to "ユーザーを登録する", new_user_registration_path
         %br/

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :show]
+  before_action :setting_post, only: [:update, :destroy]
 
   def index
     @posts = Post.all
@@ -13,8 +15,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    # @posts = Post.includes(:user)
     @currentUserEntry=Entry.where(user_id: current_user.id)
     @userEntry=Entry.where(user_id: @post.user.id)
     if @post.user.id == current_user.id
@@ -36,16 +36,13 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    post = Post.find(params[:id])
     post.update(post_params)
   end
 
   def destroy
-    post = Post.find(params[:id])
     post.destroy
   end
 
@@ -57,6 +54,14 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :date, :area_id, :postal, :place, :venue, :capacity, :remarks, :user_id).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def setting_post
+    post = Post.find(params[:id])
   end
 
 end

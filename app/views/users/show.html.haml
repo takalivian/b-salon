@@ -1,17 +1,4 @@
-.header
-  .header__header-bar
-    .header__header-bar__title
-      = link_to posts_path, class: "btn-root" do
-        Matching Baseball
-    .header__header-bar__box
-      .header__header-bar__box__post
-        = link_to new_post_path, class: "btn-post" do
-          募集する
-      .header__header-bar__box__user
-        = link_to user_path(current_user), class: "btn-edit" do
-          = current_user.name
-          - if @user.id == current_user.id
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn'
+= render "posts/header"
 
 .name-box
   .name-box__picture
@@ -33,14 +20,13 @@
       - else
         - if @isRoom == true
           %p
-            %a{:href => "/rooms/#{@roomId}"} チャットへ
+            %a{href: "/rooms/#{@roomId}"} チャットへ
         - else
           = form_for @room do |f|
             = fields_for @entry do |e|
-              = e.hidden_field :user_id, :value=> @user.id
+              = e.hidden_field :user_id, value: @user.id
             = f.submit "チャットを始める"
           
-    
   .user-content__activity
     　　活動エリア　　　
     = @user.activity
@@ -64,7 +50,4 @@
     .user-content__introduction__text-box
       = @user.introduction
 
-
-
-
-.footer
+= render "posts/footer"

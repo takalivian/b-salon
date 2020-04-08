@@ -1,22 +1,11 @@
-.header
-  .header__header-bar
-    .header__header-bar__title
-      = link_to posts_path, class: "btn-root" do
-        Matching Baseball
-    .header__header-bar__box
-      .header__header-bar__box__post
-        = link_to new_post_path, class: "btn-post" do
-          募集する
-      .header__header-bar__box__user
-        = link_to user_path(current_user), class: "btn-edit" do
-          = current_user.name
+= render "header"
 .message
   .message__message-header
     .message__message-header__header-name
       - @entries.each do |e|
         - if e.user.id == current_user.id
         - else
-          %a{:href => "/users/#{e.user.id}"}
+          %a{href: "/users/#{e.user.id}"}
             = e.user.name
             さん
   .message__main-chat
@@ -28,21 +17,21 @@
               - if m.user.id != current_user.id
                 .left-message-box
                   .left-message-box__name
-                    %a{:href => "/users/#{m.user.id}"}
+                    %a{href: "/users/#{m.user.id}"}
                       -if m.user.image?
-                        = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
+                        = image_tag "#{m.user.image.url}", size: '50x50',class: "message-user-image"
                       -else
-                        = image_tag "siruetto.jpg", :size =>'50x50',class: "message-user-image"
+                        = image_tag "siruetto.jpg", size: '50x50',class: "message-user-image"
                   .left-message-box__content
                     = m.content
               -else
                 .right-message-box
                   .right-message-box__name
-                    %a{:href => "/users/#{m.user.id}"}
+                    %a{href: "/users/#{m.user.id}"}
                       -if m.user.image?
-                        = image_tag "#{m.user.image.url}", :size =>'50x50',class: "message-user-image"
+                        = image_tag "#{m.user.image.url}", size: '50x50',class: "message-user-image"
                       -else
-                        = image_tag "siruetto.jpg", :size =>'50x50',class: "message-user-image"
+                        = image_tag "siruetto.jpg", size: '50x50',class: "message-user-image"
                   .right-message-box__content
                     = m.content
           - else
@@ -50,8 +39,8 @@
   .message__form
     .message__form__comment
       = form_for @message do |f|
-        = f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 60, class: 'text'
-        = f.hidden_field :room_id, :value => @room.id
+        = f.text_field :content, placeholder: "メッセージを入力して下さい" , size: 60, class: 'text'
+        = f.hidden_field :room_id, value: @room.id
         %br/
         = f.submit "投稿する", class: 'btn--send'
-.footer
+= render "posts/footer"

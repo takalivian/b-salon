@@ -1,18 +1,7 @@
-.header
-  .header__header-bar
-    .header__header-bar__title
-      = link_to posts_path, class: "btn-root" do
-        Matching Baseball
-    .header__header-bar__box
-      .header__header-bar__box__post
-        = link_to new_post_path, class: "btn-post" do
-          募集する
-      .header__header-bar__box__user
-        = link_to user_path(current_user), class: "btn-edit" do
-          = current_user.name
-  .header__header-bar-third
-    .header__header-bar-third__information
-      検索結果
+= render "header"
+.header__header-bar-third
+  .header__header-bar-third__information
+    検索結果
 
 .search-top
   = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
@@ -22,3 +11,4 @@
 .contents.row
   - @posts.each do |post|
     = render partial: "recruitment", locals: { post: post }
+= render "footer"
