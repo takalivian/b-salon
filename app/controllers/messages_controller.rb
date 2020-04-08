@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!, :only => [:create]
 
   def index
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :desc)
     @currentEntries = current_user.entries
     myRoomIds = []
   

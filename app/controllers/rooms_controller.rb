@@ -1,8 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
   def index
-    # @rooms = Room.all
-    # @messages = @room.messages.includes(:user)
   end
 
   def create
