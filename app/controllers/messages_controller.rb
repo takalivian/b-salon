@@ -2,8 +2,15 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!, :only => [:create]
 
   def index
-    @messages = Message.all
-
+    @messages = Message.all.order(created_at: :desc)
+    @currentEntries = current_user.entries
+    myRoomIds = []
+  
+    @currentEntries.each do |entry|
+      myRoomIds << entry.room.id
+    end
+  
+    @anotherEntries = Entry.where(room_id: myRoomIds).where('user_id != ?',current_user)
   end
 
   def create

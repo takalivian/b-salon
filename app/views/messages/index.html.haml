@@ -13,30 +13,20 @@
 
 .room-top
   トーク一覧
-.name-form
-  .name-form__icon-box
-    = icon('fas', 'search')
-  .name-form__text-box
-    = form_with url:'#', method: :get, local: true do |f|
-      = f.text_field :weather_key
-      = f.submit 'Search'
-- current_user.messages.each do |message|
-  .room-list
-    .room-list__image
-      写真
-    .room-list__talk-box
-      .room-list__talk-box__name
-        = message.user.name
-      .room-list__talk-box__last-talk
-        = message.content
-
-.room-list
-  .room-list__image
-    写真
-  .room-list__talk-box
-    .room-list__talk-box__name
-      高村
-    .room-list__talk-box__last-talk
-      よろしくお願いします。
-
+- @anotherEntries.each do |e|
+  = link_to room_path(e.room.id) do
+    .room-list
+      .room-list__image
+        -if e.user.image?
+          = image_tag "#{e.user.image.url}", :size =>'150x150',class: "message-user-image"
+        -else
+          = image_tag "siruetto.jpg", :size =>'150x150'
+      .room-list__talk-box
+        .room-list__talk-box__name
+          = e.user.name
+        .room-list__talk-box__last-talk
+          - if e.room.messages.order(created_at: :desc).take.try(:content).present? 
+            = e.room.messages.order(created_at: :desc).take.try(:content)
+          -else
+            まだメッセージはありません。
 .footer

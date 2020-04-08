@@ -30,14 +30,29 @@
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
-          a{
-            text-decoration: none;
+          .left-message-box{
+            text-align: left;
+            margin-bottom: 30px;
+            .message-user-image{
+              border-radius: 50%;
+            }
+            &__content{
+              line-height: 30px;
+              margin-left: 10px;
+            }
           }
-        }
-        &__date{
-          color: #999999;
-          font-size: 12px;
-          margin-left: 10px;
+          .right-message-box{
+            width: 650px;
+            text-align: right;
+            margin-bottom: 30px;
+            .message-user-image{
+              border-radius: 50%;
+            }
+            &__content{
+              margin-right: 10px;
+              line-height: 30px;
+            }
+          }
         }
       }
     }
@@ -49,7 +64,6 @@
   &__form{
     height: 90px;
     padding: 20px 40px;
-    background-color: #ddd;
     display: flex;
     margin-bottom: 10px;
     &__comment{
@@ -75,52 +89,4 @@
   text-align:center;
   text-decoration:none !important;
   cursor: pointer;
-}
-
-
-.room-top{
-  text-align: center;
-  height: 70px;
-  width: 100%;
-  font-size: 50px;
-  margin-bottom: 40px;
-  // background-color: gainsboro;
-}
-.name-form{
-  height: 70px;
-  width: 250px;
-  // background-color: honeydew;
-  margin: auto;
-  display: flex;
-  &__icon-box{
-
-  }
-  &__text-box{
-    
-  }
-}
-.room-list{
-  height: 150px;
-  width: 700px;
-  background-color: indianred;
-  margin: auto;
-  display: flex;
-  margin-bottom: 30px;
-  &__image{
-    width: 150px;
-    background-color: lemonchiffon;
-  }
-  &__talk-box{
-    line-height: 75px;
-    &__name{
-      background-color: lightblue;
-      height: 50%;
-      
-    }
-    &__last-talk{
-      height: 50%;
-      width: 550px;
-      background-color: lightgreen;
-    }
-  }
 }
