@@ -10,9 +10,7 @@
       .header__header-bar__box__user
         = link_to user_path(current_user), class: "btn-edit" do
           = current_user.name
-
 .show-content
-
   .show-content__show-title
     = @post.title
   .show-content__show-application
@@ -29,15 +27,11 @@
           = fields_for @entry do |e|
             = e.hidden_field :user_id, :value=> @post.user.id
           = f.submit "応募する"
-
-  
   .show-content__data
     .show-content__data__show-name
       　　募集者　　
       = link_to user_path(@post.user_id), class: "user--edit" do
         = @post.user.name
-      
-    
     .show-content__data__show-date
       　　開催日　　
       = @post.date
@@ -59,5 +53,4 @@
         備考
       .show-content__data__show-remarks__write
         = @post.remarks
-
 = render "footer"
