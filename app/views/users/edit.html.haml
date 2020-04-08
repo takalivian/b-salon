@@ -1,15 +1,4 @@
-.header
-  .header__header-bar
-    .header__header-bar__title
-      = link_to posts_path, class: "btn-root" do
-        Matching Baseball
-    .header__header-bar__box
-      .header__header-bar__box__post
-        = link_to new_post_path, class: "btn-post" do
-          募集する
-      .header__header-bar__box__user
-        = link_to user_path(current_user), class: "btn-edit" do
-          = current_user.name
+= render "posts/header"
 
 .account-page
   .account-page__top

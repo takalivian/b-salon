@@ -1,15 +1,4 @@
-.header
-  .header__header-bar
-    .header__header-bar__title
-      = link_to posts_path, class: "btn-root" do
-        Matching Baseball
-    .header__header-bar__box
-      .header__header-bar__box__post
-        = link_to new_post_path, class: "btn-post" do
-          募集する
-      .header__header-bar__box__user
-        = link_to user_path(current_user), class: "btn-edit" do
-          = current_user.name
+= render "header"
 .message
   .message__message-header
     .message__message-header__header-name
@@ -54,4 +43,4 @@
         = f.hidden_field :room_id, value: @room.id
         %br/
         = f.submit "投稿する", class: 'btn--send'
-.footer
+= render "posts/footer"
