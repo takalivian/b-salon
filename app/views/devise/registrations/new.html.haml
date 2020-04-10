@@ -1,29 +1,24 @@
 .wrapper-registrations
   .wrapper-registrations__title
     Matching Baseball
-  .wrapper-registrations__user-registrations
+  .wrapper-registrations__user-top
     新規登録
+  .wrapper-registrations__user-main
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
-      .field
-        = f.label :ニックネーム
-        %br/
-        = f.text_field :name, autofocus: true, autocomplete: "name"
-      .field
-        = f.label :メールアドレス
-        %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
-      .field
-        = f.label :パスワード
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length}文字以上で入力して下さい)
-        %br/
-        = f.password_field :password, autocomplete: "new-password"
-      .field
-        = f.label :再入力
-        %br/
-        = f.password_field :password_confirmation, autocomplete: "new-password"
+      .text-input
+        = f.text_field :name, placeholder: "入力して下さい", type: "text"
+        %label{:for => "input1"} Name
+      .text-input
+        = f.email_field :email, placeholder: "入力して下さい", type: "text"
+        %label{:for => "input1"} E-mail
+      .text-input
+        = f.password_field :password, placeholder: "入力して下さい", type: "text"
+        %label{:for => "input1"} P-word
+      .text-input
+        = f.password_field :password_confirmation, placeholder: "入力して下さい", type: "text"
+        %label{:for => "input1"} R-enter
       .actions
-        = f.submit "Sign up"
-  = render "devise/shared/links"
+        = f.submit "登録する", class: 'sign-up'
+  .wrapper-registrations__user-bottom
+    = render "devise/shared/links"

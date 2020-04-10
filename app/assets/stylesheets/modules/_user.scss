@@ -193,14 +193,67 @@
     // padding-left: 50px;
     font-size: 70px;
     padding-top: 100px;
-    background-color: rosybrown;
     font-family: 'Amatic SC', cursive;
     text-align: center;
   }
-  &__user-registrations{
+  &__user-top{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+  }
+  &__user-main{
+    text-align: center;
+    @import  url("https://fonts.googleapis.com/css?family=Montserrat");
+    .text-input{
+      position: relative;
+      margin-top: 50px;
+      input[type="text"]{
+        display: inline-block;
+        width: 500px;
+        height: 40px;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        padding: 10px 10px 10px 100px;
+        transition: all 0.1s ease-out;
+      }
+      input[type="text"] + label{
+        position: absolute;
+        left: 35%;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        border-radius: 3px 0 0 3px;
+        padding: 0 20px;
+        background: #E03616;
+        transform: translateZ(0) translateX(0);
+        transition: all 0.3s ease-in;
+        transition-delay: 0.2s;
+      }
+      input[type="text"]:focus + label{
+        transform: translateY(-120%) translateX(0%);
+        border-radius: 3px;
+        transition: all 0.1s ease-out;
+      }
+      input[type="text"]:focus{
+        padding: 10px;
+        transition: all 0.3s ease-out;
+        transition-delay: 0.2s;
+      }
+    }
+    .actions{
+      padding: 40px;
+      .sign-up{
+        padding: 10px;
+      }
+    }
+  }
+  &__user-bottom{
     text-align: center;
   }
 }
+
 
 // ログイン
 .login-form{
