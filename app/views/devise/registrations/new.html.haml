@@ -8,16 +8,16 @@
       = render "devise/shared/error_messages", resource: resource
       .text-input
         = f.text_field :name, placeholder: "入力して下さい", type: "text"
-        %label{:for => "input1"} Name
+        %label{for: "input1"} Name
       .text-input
         = f.email_field :email, placeholder: "入力して下さい", type: "text"
-        %label{:for => "input1"} E-mail
+        %label{for: "input1"} E-mail
       .text-input
-        = f.password_field :password, placeholder: "入力して下さい", type: "text"
-        %label{:for => "input1"} P-word
+        = f.password_field :password, placeholder: "6文字以上で入力して下さい", type: "text"
+        %label{for: "input1"} P-word
       .text-input
-        = f.password_field :password_confirmation, placeholder: "入力して下さい", type: "text"
-        %label{:for => "input1"} R-enter
+        = f.password_field :password_confirmation, placeholder: "もう一度入力して下さい", type: "text"
+        %label{for: "input1"} R-enter
       .actions
         = f.submit "登録する", class: 'sign-up'
   .wrapper-registrations__user-bottom
