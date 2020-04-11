@@ -1,6 +1,6 @@
 = render "header"
-.header__header-bar-third
-  .header__header-bar-third__information
+.header-bar-third
+  .header-bar-third__information
     検索結果
 
 .search-top
@@ -10,5 +10,20 @@
     = form.submit "検索", class: "search-btn" 
 .contents.row
   - @posts.each do |post|
-    = render partial: "recruitment", locals: { post: post }
+    .recruitment__content.wow.fadeInLeft
+      .recruitment__content__title
+        = post.title
+      .recruitment__content__name
+        募集者 : 
+        = link_to user_path(post.user_id), class: "user--edit" do
+          = post.user.name
+      .recruitment__content__date
+        開催日 : 
+        = post.date
+      .recruitment__content__place
+        エリア : 
+        = post.area_id
+      .recruitment__content__application-btn
+        = link_to post_path(post), class: "btn--edit" do
+          詳細を見る
 = render "footer"
