@@ -48,9 +48,13 @@
             .message-user-image{
               border-radius: 50%;
             }
-            &__content{
-              margin-right: 10px;
-              line-height: 30px;
+            &__right{
+              display: flex;
+              width: fit-content;
+              &__content{
+                margin-right: 10px;
+                line-height: 30px;
+              }
             }
           }
         }
