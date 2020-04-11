@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
-  before_action :setting_post, only: [:update, :destroy]
+  # before_action :setting_post, only: [:update, :destroy]
 
   def index
     @posts = Post.all.order(id: "DESC")
@@ -11,7 +11,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_path, notice: '投稿が送信されました'
+    else
+      redirect_to new_post_path, notice: '入力してください。'
+    end
   end
 
   def show
@@ -39,15 +44,19 @@ class PostsController < ApplicationController
   end
 
   def update
+    post = Post.find(params[:id])
     post.update(post_params)
+    redirect_to post_path, notice: '更新しました'
   end
 
   def destroy
+    post = Post.find(params[:id])
     post.destroy
+    redirect_to posts_path, notice: '削除しました'
   end
 
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword]).order(id: "DESC")
     redirect_to action: :index unless user_signed_in?
   end
 
@@ -60,8 +69,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def setting_post
-    post = Post.find(params[:id])
-  end
+  # def setting_post
+  #   post = Post.find(params[:id])
+  # end
 
 end
