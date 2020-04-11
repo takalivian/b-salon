@@ -31,13 +31,14 @@
           font-size: 16px;
           font-weight: bold;
           .left-message-box{
+            display: flex;
             text-align: left;
             margin-bottom: 30px;
             .message-user-image{
               border-radius: 50%;
             }
             &__content{
-              line-height: 30px;
+              line-height: 50px;
               margin-left: 10px;
             }
           }
@@ -51,9 +52,10 @@
             &__right{
               display: flex;
               width: fit-content;
+              margin-left: auto;
               &__content{
                 margin-right: 10px;
-                line-height: 30px;
+                line-height: 50px;
               }
             }
           }
