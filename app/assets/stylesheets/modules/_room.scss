@@ -2,7 +2,7 @@
   height: 760px;
   width: 100%;
   padding: 40px 500px 40px 500px;
-  background-color: beige;
+  background-color: whitesmoke;
   &__message-header{
     width: 100%;
     padding: 20px;
@@ -31,14 +31,33 @@
           font-size: 16px;
           font-weight: bold;
           .left-message-box{
+            display: flex;
             text-align: left;
             margin-bottom: 30px;
             .message-user-image{
               border-radius: 50%;
             }
             &__content{
-              line-height: 30px;
-              margin-left: 10px;
+              line-height: 50px;
+              margin-left: 20px;
+              position: relative;
+              padding-left: 10px;
+              padding-right: 10px;
+              color: #ffffff;
+              background-color: steelblue;
+              border-radius: 10px;
+            }
+            &__content::before{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 0;
+              height: 0;
+              left: -10px;
+              top: 10px;
+              border-right: 20px solid steelblue;
+              border-top: 15px solid transparent;
+              border-bottom: 15px solid transparent;
             }
           }
           .right-message-box{
@@ -48,9 +67,33 @@
             .message-user-image{
               border-radius: 50%;
             }
-            &__content{
-              margin-right: 10px;
-              line-height: 30px;
+            &__right{
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              &__content{
+                margin-right: 20px;
+                line-height: 50px;
+                padding-left: 10px;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 10px;
+                color: #ffffff;
+                background-color: steelblue;
+                margin-right: 20px;
+              }
+              &__content::before{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                right: -10px;
+                top: 10px;
+                border-left: 20px solid steelblue;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+              }
             }
           }
         }
