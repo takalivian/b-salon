@@ -42,9 +42,18 @@
       &__user{
         width: 40%;
         border-bottom: solid 6px slategrey;
-        .btn-edit{
+        .dropdown{
           text-decoration: none;
           color: slategrey;
+          font-size: 20px;
+          .btn{
+            text-decoration: none;
+            color: slategrey;
+            font-size: 20px;
+          }
+          .dropdown-menu{
+            text-align: center;
+          }
         }
       }
     }
