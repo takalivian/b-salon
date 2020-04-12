@@ -8,5 +8,17 @@
         = link_to  new_post_path, class: "btn-post" do
           募集する
       .header__header-bar__box__user
+        -# .dropdown
+        -#   %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+        -#     = current_user.name
+        -#     %span.caret
+        -#   %ul.dropdown-menu{:role => "menu"}
+        -#     %li{:role => "presentation"}
+        -#       %a{:href => user_path(current_user)} マイページ
+        -#     %li{:role => "presentation"}
+        -#       %a{:href => "#"} リンクのリスト２
+        -#     %li{:role => "presentation"}
+        -#       %a{:href => destroy_user_session_path, method: :delete} ログアウト
+
         = link_to user_path(current_user), class: "btn-edit" do
           = current_user.name
