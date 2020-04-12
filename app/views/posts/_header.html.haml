@@ -14,8 +14,14 @@
             %span.caret
           %ul.dropdown-menu{:role => "menu"}
             %li{:role => "presentation"}
-              %a{:href => user_path(current_user)} マイページ
+              = link_to user_path(current_user) do
+                = icon('fas', 'user')
+                マイページ
             %li{:role => "presentation"}
-              %a{:href => "#"} リンクのリスト２
+              = link_to messages_path, class: "btn-edit" do
+                = icon('fas', 'comments')
+                メッセージ
             %li{:role => "presentation"}
-              = link_to "ログアウト", destroy_user_session_path, method: :delete
+              = link_to  destroy_user_session_path, method: :delete do
+                = icon('fas', 'sign-out-alt')
+                ログアウト
