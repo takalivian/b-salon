@@ -101,6 +101,9 @@
       padding-left: 15%;
       .image-btn{
         cursor: pointer;
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
       }
       input{
         display: none;
