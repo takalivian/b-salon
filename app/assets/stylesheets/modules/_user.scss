@@ -98,10 +98,12 @@
     margin-top: 20px;
     margin-bottom: 40px;
     &__photo{
-      padding-left: 170px;
-      .fa-image{
-        font-size: 40px;
+      padding-left: 15%;
+      .image-btn{
         cursor: pointer;
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
       }
       input{
         display: none;
