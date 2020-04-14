@@ -7,8 +7,12 @@
     = form_with(model: @user, local: true) do |form|
       .account-page__content__photo
         = form.label :image, class: 'image' do
-          = icon('fas', 'image', class: 'image__icon')
-          = form.file_field :image, class: 'file'
+          - if @user.image.present?
+            = image_tag "#{(@user.image).to_s}", width: "300", height: "300", alt: "preview", id: :img_prev_edit, class: "image-btn"
+            = form.file_field :image
+          - else
+            = image_tag "siruetto.jpg", alt: "preview", id: :img_prev_edit, class: "image-btn"
+            = form.file_field :image
       .account-page__content__profile-name
         名前
       = form.text_field :name, placeholder: "名前を入力して下さい" , rows: "20", class: 'title-box'
