@@ -20,7 +20,7 @@
       color: steelblue;
     }
     &__title{
-      padding-left: 50px;
+      padding-left: 5%;
       font-size: 30px;
       font-family: 'Amatic SC', cursive;
       
@@ -378,6 +378,25 @@
   text-align: center;
 }
 
+// レスポンシブ
+@media screen and (max-width: 480px){
+  
+  .header__header-bar__title{
+    font-size: 120%;
+  }
 
+  .header__header-bar__box{
+    width: 30%;
+    padding-right: 30%;
+  }
 
+  .header__header-bar__box__post{
+    display: none;
+  }
+  
+  .dropdown-menu{
+    transform: translate3d(-60px, 64px, 0px);
+  }
+
+}
 
