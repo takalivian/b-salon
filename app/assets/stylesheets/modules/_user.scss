@@ -418,5 +418,14 @@
   .login-form__login-main .text-input input[type="text"] + label {
     left: 17%;
   }
-  
+
+  .wrapper-registrations__title {
+    font-size: 40px;
+  }
+  .wrapper-registrations__user-main .text-input input[type="text"] {
+    width: 65%;
+  }
+  .wrapper-registrations__user-main .text-input input[type="text"] + label {
+    left: 17%;
+  }
 }
