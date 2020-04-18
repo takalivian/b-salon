@@ -160,6 +160,7 @@
   background-color: red;
 }
 
+// トップページ
 .top-page{
   background-image: image-url("start.jpg");
   background-size: cover;
@@ -171,9 +172,8 @@
   font-size: 40px;
   &__box{
     height: 200px;
-    width: 800px;
-    margin-left: auto;
-    
+    width: 50%;
+    margin-left: auto;    
     &__title{
       margin-bottom: 30px;
       color: blanchedalmond;
@@ -394,5 +394,18 @@
 
   .account-page__content .introduction-box {
     width: 100%;
+  }
+// スタート
+  .top-page{
+    font-size: 25px;
+    padding-top: 130%;
+    text-align: center;
+    &__box{
+      width: 100%;
+      margin-left: 0;
+      &__title{
+        font-size: 35px;
+      }
+    }
   }
 }
