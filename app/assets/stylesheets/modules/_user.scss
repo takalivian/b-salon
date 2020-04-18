@@ -212,7 +212,7 @@
       margin-top: 50px;
       input[type="text"]{
         display: inline-block;
-        width: 500px;
+        width: 30%;
         height: 40px;
         box-sizing: border-box;
         outline: none;
@@ -278,7 +278,7 @@
       margin-top: 50px;
       input[type="text"]{
         display: inline-block;
-        width: 500px;
+        width: 30%;
         height: 40px;
         box-sizing: border-box;
         outline: none;
@@ -410,4 +410,13 @@
       }
     }
   }
+
+// ログイン
+  .login-form__login-main .text-input input[type="text"] {
+    width: 65%;
+  }
+  .login-form__login-main .text-input input[type="text"] + label {
+    left: 17%;
+  }
+  
 }
