@@ -18,6 +18,8 @@
     width: 150px;
     .message-user-image{
       border-radius: 50%;
+      height: 150px;
+      width: 150px;
     }
   }
   &__talk-box{
@@ -53,4 +55,24 @@
 .room-list:hover{
   cursor: pointer;
   transform: scale(1.1, 1.1);
+}
+
+@media screen and (max-width: 480px){
+  .room-top{
+    font-size: 30px;
+  }
+
+  .room-list{
+    height: 10%;
+    width: 95%;
+    padding-right: 2%;
+    &__image{
+      width: 50%;
+      .message-user-image{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
 }
