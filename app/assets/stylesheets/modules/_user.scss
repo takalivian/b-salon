@@ -372,3 +372,15 @@
   margin: auto;
   text-align: center;
 }
+
+
+
+// レスポンシブ
+@media screen and (max-width: 480px){
+
+// 詳細ページ
+  .user-content{
+    padding: 0px 5%;
+    width: 100%;
+  }
+}
