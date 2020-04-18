@@ -25,11 +25,14 @@
       　　開催日　　
       = @post.date
     .show-content__data__show-place
-      　　住所　　　
-      〒
-      = @post.postal
-      　
-      = @post.place
+      .show-content__data__show-place__title
+        住所
+      .show-content__data__show-place__box
+        .show-content__data__show-place__box__postal
+          〒
+          = @post.postal
+        .show-content__data__show-place__box__write
+          = @post.place
     .show-content__data__show-venue
       　　会場　　　
       = @post.venue

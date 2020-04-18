@@ -16,11 +16,11 @@
     justify-content: space-between;
     text-align: center;
     line-height: 80px;
-    a{
+    .a{
       color: steelblue;
     }
     &__title{
-      padding-left: 50px;
+      padding-left: 5%;
       font-size: 30px;
       font-family: 'Amatic SC', cursive;
       
@@ -83,10 +83,9 @@
   &__search{
     text-align: center;
     display: flex;
-    padding-left: 740px;
     padding-top: 30px;
-    input{
-      
+    .search-form{
+      margin: auto;
     }
   }
 }
@@ -145,106 +144,100 @@
   margin-top: 20px;
 }
 
+// 編集
 .header-title{
   width: 100%;
   height: 150px;
-  padding-left: 550px;
+  text-align: center;
   line-height: 150px;
   font-size: 50px;
   font-family: 'Source Code Pro', monospace;
 }
-
 .content{
   height: 100%;
-  width: 70%;
+  width: 60%;
   background-color: ghostwhite;
   margin: auto;
-  padding: 20px 100px;
+  padding: 2% 4%;
   margin-top: 20px;
   font-size: 18px;
   &__title{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .title-box{
       padding-left: 5px;
-      width: 740px;
+      width: 85%;
       margin-left: 30px;
-      height: 30px;
+
     }
   }
   &__date{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .date-box{
       margin-left: 45px;
-      height: 30px;
+
     }
   }
   &__area{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .area-box{
       margin-left: 45px;
-      height: 30px;
+
     }
   }
   &__place{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .postal-box{
       padding-left: 5px;
       margin-left: 60px;
-      width: 90px;
-      height: 30px;
+      width: 13%;
+
     }
     .place-box{
       padding-left: 5px;
       margin-left: 10px;
-      width: 640px;
-      height: 30px;
+      width: 71%;
+
     }
   }
   &__venue{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .venue-box{
       padding-left: 5px;
       margin-left: 45px;
       width: 300px;
-      height: 30px;
+
     }
   }
   &__capacity{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .capacity-box{
       padding-left: 5px;
       margin-left: 60px;
       width: 60px;
-      height: 30px;
+
     }
   }
   &__remarks{
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .remarks-box{
       padding-left: 5px;
       margin-left: 60px;
-      width: 740px;
-      height: 300px;
+      width: 85%;
+      height: 150px;
     }
   }
   &__upload{
-    padding-left: 350px;
     margin-right: 20px;
     display: flex;
     .upload-box{
+      margin: auto;
       display: inline-block;
       padding: 0.5em 1em;
       text-decoration: none;
@@ -261,10 +254,8 @@
     }
     &__destroy{
       font-size: 40px;
-      margin-left: 100px;
     }
   }
-
 }
 
 .post-done{
@@ -301,7 +292,7 @@
     height: 70px;
     line-height: 100px;
     text-align: center;
-    font-size: 40px;
+    font-size: 190%;
     font-weight: bold;
     margin-top: 20px;
   }
@@ -330,33 +321,39 @@
     }
   }
   &__data{
-    width: 600px;
+    width: 40%;
     margin: auto;
     margin-bottom: 100px;
     font-size: 17px;
     font-weight: bold;
     &__show-name{
-      height: 50px;
       border-top: solid 1px gray;
       padding: 12px 0;
     }
     &__show-date{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
     &__show-place{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
+      display: flex;
+      &__title{
+        width: 18%;
+        padding-left: 5%;
+      }
+      &__box{
+        &__postal{
+        }
+        &__write{
+        }
+      }
     }
     &__show-venue{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
     &__show-capacity{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
@@ -365,11 +362,11 @@
       padding-top: 12px;
       display: flex;
       &__title{
-        width: 67px;
-        margin-left: 33px;
+        width: 18%;
+        padding-left: 5%;
       }
       &__write{
-        padding-left: 20px;
+        // padding-left: 20px;
       }
     }
   }
@@ -379,6 +376,133 @@
   text-align: center;
 }
 
+// レスポンシブ
+@media screen and (max-width: 480px){
+  
+  .header__header-bar__title{
+    font-size: 120%;
+  }
 
+  .header__header-bar__box{
+    width: 30%;
+    padding-right: 30%;
+    &__post{
+      width: 120px;
+      background: #3ccec2ba;
+      text-align: center;
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      padding: 15px;
+      z-index: 1;
+      border-bottom: none;
+      .btn-post{
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+  }
+  
+  .dropdown-menu{
+    transform: translate3d(-60px, 64px, 0px);
+  }
 
+// ヘッダー写真
+  .header-bar-picture{
+    height: 220px;
+    font-size: 20px;
+    line-height: 80px;
+  }
 
+// 投稿
+  .header-bar-third__information{
+    font-size: 40px;
+  }
+  .recruitment{
+    padding: inherit;
+    &__content{
+      background-position: center;
+    }
+  }
+
+// 詳細ページ
+  .show-content__data{
+    width: 90%;
+  }
+  
+  .show-content__data__show-place__title{
+    padding-left: 10%;
+    width: 45%;
+  }
+
+  .show-content__data__show-remarks__title{
+    padding-left: 10%;
+    width: 36%;
+  }
+
+// 編集
+  .header-title{
+    font-size: 30px;
+    height: 90px;
+    line-height: 105px;
+  }
+  .content{
+    width: 90%;
+    &__title{
+      display: block;
+      margin-bottom: 1%;
+      .title-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__date{
+      display: block;
+      margin-bottom: 1%;
+      .date-box{
+        margin-left: auto;
+      }
+    }
+    &__area{
+      display: block;
+      margin-bottom: 1%;
+      .area-box{
+        margin-left: auto;
+      }
+    }
+    &__place{
+      display: block;
+      margin-bottom: 1%;
+      .postal-box{
+        width: 100%;
+        margin-left: auto;
+      }
+      .place-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__venue{
+      display: block;
+      .venue-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__capacity{
+      display: block;
+      .capacity-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__remarks{
+      display: block;
+      .remarks-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+  }
+}
