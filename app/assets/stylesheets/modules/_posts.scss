@@ -83,10 +83,9 @@
   &__search{
     text-align: center;
     display: flex;
-    padding-left: 740px;
     padding-top: 30px;
-    input{
-      
+    .search-form{
+      margin: auto;
     }
   }
 }
