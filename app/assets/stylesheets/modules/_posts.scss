@@ -403,7 +403,14 @@
     height: 220px;
     font-size: 20px;
     line-height: 80px;
+  }
 
+// 投稿
+  .recruitment{
+    padding: inherit;
+    &__content{
+      background-position: center;
+    }
   }
 }
 
