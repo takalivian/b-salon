@@ -16,7 +16,7 @@
     justify-content: space-between;
     text-align: center;
     line-height: 80px;
-    a{
+    .a{
       color: steelblue;
     }
     &__title{
@@ -386,10 +386,22 @@
   .header__header-bar__box{
     width: 30%;
     padding-right: 30%;
-  }
-
-  .header__header-bar__box__post{
-    display: none;
+    &__post{
+      width: 120px;
+      background: #3ccec2ba;
+      text-align: center;
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      padding: 15px;
+      z-index: 1;
+      border-bottom: none;
+      .btn-post{
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
   }
   
   .dropdown-menu{
@@ -493,6 +505,4 @@
       }
     }
   }
-
-  
 }
