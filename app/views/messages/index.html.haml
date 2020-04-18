@@ -15,7 +15,7 @@
           = e.user.name
         .room-list__talk-box__last-talk
           - if e.room.messages.order(created_at: :desc).take.try(:content).present? 
-            = e.room.messages.order(created_at: :desc).take.try(:content).truncate(30)
+            = e.room.messages.order(created_at: :desc).take.try(:content).truncate(20)
           -else
             まだメッセージはありません。
 = render "posts/footer"

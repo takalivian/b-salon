@@ -5,6 +5,7 @@
   font-size: 50px;
   margin-bottom: 40px;
   margin-top: 40px;
+  font-weight: bold;
 }
 .room-list{
   height: 150px;
@@ -27,7 +28,7 @@
     position: relative;
     display: inline-block;
     margin: 1.5em 0 1.5em 15px;
-    padding: 7px 10px;
+    padding: 7px 20px;
     min-width: 120px;
     max-width: 100%;
     color: #555;
@@ -36,6 +37,7 @@
     &__name{
       height: 50%;
       padding-top: 10px;
+      font-weight: bold;
     }
     &__last-talk{
       height: 50%;
@@ -60,18 +62,34 @@
 @media screen and (max-width: 480px){
   .room-top{
     font-size: 30px;
+    margin-bottom: 0;
   }
 
   .room-list{
     height: 10%;
     width: 95%;
-    padding-right: 2%;
+    margin-bottom: 0;
+    // margin: 0;
+    padding: 0 4%;
     &__image{
-      width: 50%;
+      width: 35%;
       .message-user-image{
         border-radius: 50%;
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
+      }
+    }
+    &__talk-box{
+      width: 70%;
+      padding: 7px 10px;
+      &__name{
+        width: 100%;
+        font-size: 10px;
+        padding-top: 0;
+      }
+      &__last-talk{
+        width: 100%;
+        font-size: 1px;
       }
     }
   }
