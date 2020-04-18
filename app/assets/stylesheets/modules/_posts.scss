@@ -155,95 +155,89 @@
 }
 .content{
   height: 100%;
-  width: 70%;
+  width: 60%;
   background-color: ghostwhite;
   margin: auto;
-  padding: 20px 100px;
+  padding: 2% 4%;
   margin-top: 20px;
   font-size: 18px;
   &__title{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .title-box{
       padding-left: 5px;
-      width: 740px;
+      width: 85%;
       margin-left: 30px;
-      height: 30px;
+
     }
   }
   &__date{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .date-box{
       margin-left: 45px;
-      height: 30px;
+
     }
   }
   &__area{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .area-box{
       margin-left: 45px;
-      height: 30px;
+
     }
   }
   &__place{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .postal-box{
       padding-left: 5px;
       margin-left: 60px;
-      width: 90px;
-      height: 30px;
+      width: 13%;
+
     }
     .place-box{
       padding-left: 5px;
       margin-left: 10px;
-      width: 640px;
-      height: 30px;
+      width: 71%;
+
     }
   }
   &__venue{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .venue-box{
       padding-left: 5px;
       margin-left: 45px;
       width: 300px;
-      height: 30px;
+
     }
   }
   &__capacity{
-    height: 30px;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .capacity-box{
       padding-left: 5px;
       margin-left: 60px;
       width: 60px;
-      height: 30px;
+
     }
   }
   &__remarks{
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
     .remarks-box{
       padding-left: 5px;
       margin-left: 60px;
-      width: 740px;
-      height: 300px;
+      width: 85%;
+      height: 150px;
     }
   }
   &__upload{
-    padding-left: 350px;
     margin-right: 20px;
     display: flex;
     .upload-box{
+      margin: auto;
       display: inline-block;
       padding: 0.5em 1em;
       text-decoration: none;
@@ -260,10 +254,8 @@
     }
     &__destroy{
       font-size: 40px;
-      margin-left: 100px;
     }
   }
-
 }
 
 .post-done{
@@ -438,5 +430,67 @@
   }
 
 // 編集
-
+  .header-title{
+    font-size: 35px;
+    height: 90px;
+    line-height: 105px;
+  }
+  .content{
+    width: 90%;
+    &__title{
+      display: block;
+      margin-bottom: 1%;
+      .title-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__date{
+      display: block;
+      margin-bottom: 1%;
+      .date-box{
+        margin-left: auto;
+      }
+    }
+    &__area{
+      display: block;
+      margin-bottom: 1%;
+      .area-box{
+        margin-left: auto;
+      }
+    }
+    &__place{
+      display: block;
+      margin-bottom: 1%;
+      .postal-box{
+        width: 100%;
+        margin-left: auto;
+      }
+      .place-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__venue{
+      display: block;
+      .venue-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__capacity{
+      display: block;
+      .capacity-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+    &__remarks{
+      display: block;
+      .remarks-box{
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+  }
 }
