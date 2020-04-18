@@ -385,7 +385,7 @@
 
   .header__header-bar__box{
     width: 30%;
-    padding-right: 30%;
+    padding-right: 35%;
     &__post{
       width: 120px;
       background: #3ccec2ba;
@@ -402,10 +402,9 @@
         color: #FFF;
       }
     }
-  }
-  
-  .dropdown-menu{
-    transform: translate3d(-60px, 64px, 0px);
+    &__user{
+      border-bottom: 0em;
+    }
   }
 
 // ヘッダー写真
