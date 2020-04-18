@@ -144,15 +144,15 @@
   margin-top: 20px;
 }
 
+// 編集
 .header-title{
   width: 100%;
   height: 150px;
-  padding-left: 550px;
+  text-align: center;
   line-height: 150px;
   font-size: 50px;
   font-family: 'Source Code Pro', monospace;
 }
-
 .content{
   height: 100%;
   width: 70%;
@@ -436,4 +436,7 @@
     padding-left: 10%;
     width: 36%;
   }
+
+// 編集
+
 }
