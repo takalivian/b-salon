@@ -300,7 +300,7 @@
     height: 70px;
     line-height: 100px;
     text-align: center;
-    font-size: 40px;
+    font-size: 190%;
     font-weight: bold;
     margin-top: 20px;
   }
@@ -329,33 +329,39 @@
     }
   }
   &__data{
-    width: 600px;
+    width: 40%;
     margin: auto;
     margin-bottom: 100px;
     font-size: 17px;
     font-weight: bold;
     &__show-name{
-      height: 50px;
       border-top: solid 1px gray;
       padding: 12px 0;
     }
     &__show-date{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
     &__show-place{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
+      display: flex;
+      &__title{
+        width: 18%;
+        padding-left: 5%;
+      }
+      &__box{
+        &__postal{
+        }
+        &__write{
+        }
+      }
     }
     &__show-venue{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
     &__show-capacity{
-      height: 50px;
       border-top: solid 1px gainsboro;
       padding: 12px 0;
     }
@@ -364,11 +370,11 @@
       padding-top: 12px;
       display: flex;
       &__title{
-        width: 67px;
-        margin-left: 33px;
+        width: 18%;
+        padding-left: 5%;
       }
       &__write{
-        padding-left: 20px;
+        // padding-left: 20px;
       }
     }
   }
@@ -414,5 +420,20 @@
     &__content{
       background-position: center;
     }
+  }
+
+// 詳細ページ
+  .show-content__data{
+    width: 90%;
+  }
+  
+  .show-content__data__show-place__title{
+    padding-left: 10%;
+    width: 45%;
+  }
+
+  .show-content__data__show-remarks__title{
+    padding-left: 10%;
+    width: 36%;
   }
 }
