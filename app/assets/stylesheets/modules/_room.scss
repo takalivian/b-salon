@@ -21,9 +21,10 @@
     height: 550px;
     &__message-post{
       padding-bottom: 20px;
-      padding: 10px;
+      // padding: 10px;
       height: 100%;
       overflow: scroll;
+      padding: 0 23%;
       &__upper-info{
         display: flex;
         &__name{
@@ -141,5 +142,16 @@
 @media screen and (max-width: 480px){
   .message__main-chat__message-post__upper-info__name .right-message-box {
     width: auto;
+  }
+
+  .message__main-chat__message-post {
+    padding-bottom: 20px;
+    height: 100%;
+    overflow: scroll;
+    padding: 0 1%;
+}
+  .message__main-chat__message-post__upper-info__name {
+    margin: 0;
+    margin-left: auto;
   }
 }
