@@ -13,7 +13,8 @@
 - 投稿検索
 - ダイレクトメッセージ機能
 - メッセージ一覧表示
-- 単体テスト  
+- 単体テスト
+- レスポンシブデザイン  
  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61145524/79036157-71d74900-7c00-11ea-87b3-1647d11584c6.jpeg" width="170px"><img src="https://user-images.githubusercontent.com/61145524/79036184-b7941180-7c00-11ea-8d0b-b607d112ee36.png" width="130px"><img src="https://user-images.githubusercontent.com/61145524/79036135-1d33ce00-7c00-11ea-8598-1b8f402c0f7f.png" width="140px">&emsp;<img src="https://user-images.githubusercontent.com/61145524/79036339-6be26780-7c02-11ea-98cb-b36569334419.png" width="80px">
