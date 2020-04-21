@@ -1,5 +1,9 @@
 # 野球好きの為のSNS
-[![Image from Gyazo](https://i.gyazo.com/196c3c2c6003234ecd710e344288df8f.jpg)](https://gyazo.com/196c3c2c6003234ecd710e344288df8f)
+![Image from Gyazo](https://user-images.githubusercontent.com/61145524/79874725-aaa6c780-8423-11ea-9a59-397c27d5e47e.jpg)
+  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61145524/79873862-a29a5800-8422-11ea-87d7-19b7e5ee042e.png" width="500px"></p>
+  
 ## 🌐 App URL
 [MatchingBaseball](http://matchingbaseball.tokyo/)
 ## どんなアプリ？
